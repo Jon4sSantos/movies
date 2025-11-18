@@ -1,0 +1,42 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+html, body{
+     height: 100vh;
+     background-color: black;
+     position: relative;
+}
+
+main {
+     height: calc(100% - 87px);
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 4px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px black;
+    border-radius: 10px;
+    background: #1a1818;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #0b36cd;
+    border-radius: 10px;
+    transition: all .6s;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0228ae;
+}
