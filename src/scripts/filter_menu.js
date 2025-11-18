@@ -1,24 +1,39 @@
 const filter_btn = document.getElementById('movies_filters_button');
 const filter_menu = document.getElementById('filter_menu_desktop');
+const years_list = document.getElementById('years_list');
 
 filter_btn.addEventListener('click', () => {
-     if (filter_menu.style.transform == 'translate(-50%, -100%)') {
+     const open = filter_menu.style.transform === 'translate(-50%, 20%)';
+     if (open) {
+          filter_menu.style.transform = 'translate(-50%, -100%)';
+          filter_btn.style.backgroundColor = 'white';
+
+          years_list.scrollTop0
+     } else {
           filter_menu.style.transform = 'translate(-50%, 20%)';
           filter_btn.style.backgroundColor = 'grey';
      }
-     else {
-          filter_menu.style.transform = 'translate(-50%, -100%)';
-          filter_btn.style.backgroundColor = 'white';
-     }
-}); 
+});
 
-
-const lista_dos_anos = document.getElementById('years_list');
-let ano = 1900;
-
-while (ano <= 2025) {
-     let novoAno = document.createElement('li');
-     novoAno.textContent = ano;
-     lista_dos_anos.appendChild(novoAno);
-     ano++
+const yearsList = document.getElementById("years_list");
+for (let y = 2025; y >= 1950; y--) {
+     const li = document.createElement("li");
+     li.classList.add('ano');
+     li.textContent = y;
+     yearsList.appendChild(li);
 }
+const anos = document.querySelectorAll('.ano');
+console.log(anos);
+
+anos.forEach((ano) => {
+     ano.addEventListener('click', () => {
+          ano.classList.toggle('escolhido');
+          if (ano.classList.contains('escolhido')) {
+               ano.style.backgroundColor = 'yellow';
+               ano.style.color = 'black';
+          } else {
+               ano.style.color = '';
+               ano.style.backgroundColor = "";
+          }
+     });
+});

@@ -15,38 +15,96 @@
 </head>
 
 <body>
+
      <div id="filter_menu_desktop">
-          <div id="generos">
+          <div id="generos" class="filter-section">
                <h2 class="filter-title">Gêneros</h2>
-               <div id="gender-list">
+               <ul id="gender-list">
                     <li class="gender">
-                         <input type="checkbox" name="acao" id="acao">
-                         <label for="acao">Ação</label>
+                         <div class="gender-content">
+                              <input type="checkbox" name="acao" id="acao">
+                              <label for="acao">Ação</label>
+                         </div>
                     </li>
                     <li class="gender">
-                         <input type="checkbox" name="aventura" id="aventura">
-                         <label for="aventura">Aventura</label>
+                         <div class="gender-content">
+                              <input type="checkbox" name="aventura" id="aventura">
+                              <label for="aventura">Aventura</label>
+                         </div>
                     </li>
                     <li class="gender">
-                         <input type="checkbox" name="drama" id="drama">
-                         <label for="drama">Drama</label>
+                         <div class="gender-content">
+                              <input type="checkbox" name="drama" id="drama">
+                              <label for="drama">Drama</label>
+                         </div>
                     </li>
                     <li class="gender">
-                         <input type="checkbox" name="terror" id="terror">
-                         <label for="terror">Terror</label>
+                         <div class="gender-content">
+                              <input type="checkbox" name="terror" id="terror">
+                              <label for="terror">Terror</label>
+                         </div>
                     </li>
-               </div>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="comedia" id="comedia">
+                              <label for="comedia">Comédia</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="romance" id="romance">
+                              <label for="romance">Romance</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="ficcao" id="ficcao">
+                              <label for="ficcao">Ficção Científica</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="animacao" id="animacao">
+                              <label for="animacao">Animação</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="documentario" id="documentario">
+                              <label for="documentario">Documentário</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="musical" id="musical">
+                              <label for="musical">Musical</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="fantasia" id="fantasia">
+                              <label for="fantasia">Fantasia</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="suspense" id="suspense">
+                              <label for="suspense">Suspense</label>
+                         </div>
+                    </li>
+               </ul>
           </div>
-          <div id="anos">
+          <div id="anos" class="filter-section">
                <h2 class="filter-title">Ano de Lançamento</h2>
                <ul id="years_list">
                     <!-- anos -->
                </ul>
           </div>
-          <div id="populares">
-               <h2 class="filter-title">Pupularidade</h2>
+          <div id="filter_button_div">
+               <button id="filter_button">Aplicar Filtros</button>
           </div>
      </div>
+     
      <header>
           <div id="site_title">
                <h1>site of movies</h1>
@@ -64,15 +122,18 @@
      <main>
           <section id="home">
                <div id="movie_poster_container">
-                    <div id="poster"></div>
+                    <img src="src/assets/images/bugoniaPoster.jpg" alt="posterfilme">
                </div>
                <div id="movie_content">
-                         <div id="movie_info">
+                    <div id="movie_info">
                          <h2 id="movie_title">Bugonia - 2025</h2>
-                         <p id="movie_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, ea natus molestias quos consequatur quisquam aliquam minima aut, eveniet voluptatem fugit voluptatibus laborum. Error nulla commodi veniam consequatur delectus laboriosam.</p>
+                         <p id="movie_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, ea
+                              natus molestias quos consequatur quisquam aliquam minima aut, eveniet voluptatem fugit
+                              voluptatibus laborum. Error nulla commodi veniam consequatur delectus laboriosam.</p>
                     </div>
                </div>
           </section>
+
      </main>
      <script src="src/scripts/filter_menu.js"></script>
 </body>
