@@ -15,6 +15,13 @@ filter_btn.addEventListener('click', () => {
      }
 });
 
+filter_menu.addEventListener('mouseleave', (e) => {
+     filter_menu.style.transform = 'translate(-50%, -100%';
+          filter_btn.style.backgroundColor = 'white'; 
+});
+
+
+
 const yearsList = document.getElementById("years_list");
 for (let y = 2025; y >= 1950; y--) {
      const li = document.createElement("li");

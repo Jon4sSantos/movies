@@ -11,8 +11,9 @@
      padding: 20px;
 }
 
-#movie_poster {
-     height: 100%;
+#poster_movie {
+     height: 50%;
+     border: 5px solid yellow;
 } 
 
 #movie_content {
