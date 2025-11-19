@@ -112,10 +112,12 @@
                <h1>site of movies</h1>
           </div>
           <div id="search_movies">
-               <input type="text" id="search_movies_input" placeholder="Movie">
-               <button id="search_movies_button">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-               </button>
+               <form action="" id="search_movies_form">
+                    <input type="text" id="search_movies_input" placeholder="Movie">
+                    <button type="submit" id="search_movies_button">
+                         <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+               </form>
                <button id="movies_filters_button">
                     <i class="fa-solid fa-filter"></i>
                </button>
@@ -181,6 +183,7 @@
      </main>
      <script src="src/scripts/filter_menu.js"></script>
      <script src="src/scripts/populars_movies_poster.js"></script>
+     <script src="src/scripts/api.js"></script>
 </body>
 
 </html>

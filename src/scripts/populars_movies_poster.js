@@ -2,6 +2,7 @@ const poster_container = document.querySelectorAll('.popular-poster-div');
 const poster = document.querySelectorAll('.popular-poster');
 const poster_info = document.querySelectorAll('.popular-poster-info');
 const poster_area = document.getElementById('populares_posters');
+
 let posterAberto = false;
 
 poster_container.forEach((posterDiv, i) => {

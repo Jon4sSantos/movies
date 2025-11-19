@@ -21,6 +21,11 @@ header {
   gap: 20px;
 }
 
+#search_movies_form {
+     display: flex;
+     gap: 20px;
+}
+
 #movies_filters_button {
   color: black;
   width: 40px;
