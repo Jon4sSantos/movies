@@ -1,7 +1,7 @@
 #filter_menu_desktop {
   height: 500px;
   width: 80%;
-  background-color: rgba(0, 0, 0, 0.856);
+  background-color: rgba(0, 0, 0, 0.904);
   color: white;
   z-index: 1;
   position: fixed;
@@ -95,7 +95,7 @@
   text-align: center;
 }
 
-#filter_button {
+.filter_button {
   padding: 7px;
   box-shadow: 0px 0px 20px -5px yellow;
   border-radius: 20px;
@@ -107,12 +107,12 @@
   border: 3px solid black;
 }
 
-#filter_button:hover {
+.filter_button:hover {
   background-color: rgb(192, 131, 0);
   box-shadow: 0px 0px 20px -5px rgb(192, 131, 0);
 }
 
-#filter_button:active {
+.filter_button:active {
   background-color: red;
   box-shadow: 0px 0px 20px -5px red;
 }

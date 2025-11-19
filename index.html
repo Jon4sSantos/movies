@@ -8,6 +8,7 @@
      <link rel="stylesheet" href="src/styles/header.css">
      <link rel="stylesheet" href="src/styles/home.css">
      <link rel="stylesheet" href="src/styles/filter_movie_menu.css">
+     <link rel="stylesheet" href="src/styles/popular_movies.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
           integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -101,7 +102,8 @@
                </ul>
           </div>
           <div id="filter_button_div">
-               <button id="filter_button">Aplicar Filtros</button>
+               <button class="filter_button" id="remove_filter_button">Remover Filtros</button>
+               <button class="filter_button" id="aply_filter_button">Aplicar Filtros</button>
           </div>
      </div>
      
@@ -122,7 +124,7 @@
      <main>
           <section id="home">
                <div id="movie_poster_container">
-                    <img src="src/assets/images/bugoniaPoster.jpg" alt="posterfilme">
+                    <img src="src/assets/images/bugoniaPoster.jpg" alt="posterfilme" id="poster_home">
                </div>
                <div id="movie_content">
                     <div id="movie_info">
@@ -133,9 +135,26 @@
                     </div>
                </div>
           </section>
-
+          <section id="popular_movies">
+               <h2 id="populares_title">Filmes do Momento!</h2>
+               <div id="slider">
+                    <div id="populares_posters">
+                         <div class="popular-poster-div">
+                              <img src="src/assets/images/Se7en.jpg" class="popular-poster" alt="">
+                         </div>
+                         <div class="popular-poster-div">
+                              <img src="src/assets/images/The Usual Suspects.jpg" class="popular-poster" alt="">
+                         </div>
+                         <div class="popular-poster-div">
+                              <img src="src/assets/images/NightCrawler.jpg" class="popular-poster" alt="">
+                         </div>
+                    </div>
+               </div>
+          </section>
+ 
      </main>
      <script src="src/scripts/filter_menu.js"></script>
+     <script src="src/scripts/populars_movies_poster.js"></script>
 </body>
 
 </html>

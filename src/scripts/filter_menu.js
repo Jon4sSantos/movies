@@ -29,11 +29,9 @@ anos.forEach((ano) => {
      ano.addEventListener('click', () => {
           ano.classList.toggle('escolhido');
           if (ano.classList.contains('escolhido')) {
-               ano.style.backgroundColor = 'yellow';
-               ano.style.color = 'black';
+               ano.style.color = 'yellow';         
           } else {
-               ano.style.color = '';
-               ano.style.backgroundColor = "";
+               ano.style.textDecoration = 'none';
           }
      });
 });

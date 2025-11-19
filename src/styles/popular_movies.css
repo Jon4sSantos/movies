@@ -1,0 +1,29 @@
+#popular_movies {
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+
+#populares_title {
+    margin-top: 100px;
+    color: yellow;
+    text-align: center;
+    font-size: 3em;
+}
+
+#populares_posters {
+    width: 95%;
+    margin: auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 3px solid yellow;
+}
+
+.popular-poster {
+    object-fit: cover;
+    transform: scale(0.3);
+    object-position: bottom;
+    transition: 0.4s;
+    border: 5px solid rgb(194, 194, 0);
+}

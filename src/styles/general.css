@@ -12,11 +12,12 @@ html, body{
 }
 
 main {
-     height: calc(100% - 87px);
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
 }
 
 ::-webkit-scrollbar {
     width: 7px;
     height: 4px;
 }
-
