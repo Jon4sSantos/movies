@@ -18,12 +18,28 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border: 3px solid yellow;
+    padding: 10px;
+}
+
+.popular-poster-div.active {
+    display: flex;
+}
+
+.popular-poster-div.hidden {
+    display: none;
 }
 
 .popular-poster {
     object-fit: cover;
     transform: scale(0.3);
     object-position: bottom;
-    transition: 0.4s;
+    transition: all.7s ease;
     border: 5px solid rgb(194, 194, 0);
+}
+
+.popular-poster-info {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 10%;
 }

@@ -1,34 +1,51 @@
-const poster = document.querySelectorAll('.popular-poster');
 const poster_container = document.querySelectorAll('.popular-poster-div');
+const poster = document.querySelectorAll('.popular-poster');
+const poster_info = document.querySelectorAll('.popular-poster-info');
+const poster_area = document.getElementById('populares_posters');
+let posterAberto = false;
 
-console.log(poster);
-poster.forEach(Poster=> {
-     let click = false;
-
-     Poster.addEventListener('mouseenter', () => {
-          Poster.style.transform = 'rotate(4deg) scale(1)';
+poster_container.forEach((posterDiv, i) => {
+     poster[i].addEventListener('mouseenter', () => {
+          if (!posterAberto)
+               poster[i].style.transform = 'rotate(4deg) scale(0.6)';
      });
-     Poster.addEventListener('mouseleave', () => {
-          if (!click) {
-               Poster.style.transform = 'scale(0.3) rotate(-4deg)';
+     poster[i].addEventListener('mouseleave', () => {
+          if (!posterAberto) {
+               poster[i].style.transform = 'scale(0.3) rotate(-4deg)';
           }
      });
-     
-     Poster.addEventListener('click', () => {
-          if (!click) {
-               click = true;
-               poster_container[0].style.gridColumn= '1/4';
-               poster_container[0].style.backgroundColor = 'red';
-               Poster.style.transform = 'rotate(0) scale(1)';
-               poster_container.style.position = 'absolute';
-               poster_container.style.transition = 'left 0.4s';
-               poster_container.style.left = '0px';
-               
+     poster[i].addEventListener('click', () => {
+          if (!posterAberto) {
+               posterAberto = true;
+               openPoster(i);
           } else {
-               Poster.style.transform = 'scale(0.3)';
-               Poster.style.position = '';
-               Poster.style.left = '';
-               click = false;
+               posterAberto = false;
+               closePoster(i);
           }
+     });
+     poster_info[i].addEventListener('click', () => {
+          posterAberto = false;
+          closePoster(i);
      });
 });
+
+function openPoster(i) {
+     poster_area.style.gridTemplateColumns = '1fr'; // abre as info
+     poster_container.forEach(posterDiv2 => {
+          posterDiv2.classList.add('hidden'); // os outros somem
+     });
+     poster_container[i].classList.remove('hidden'); // o atual não some
+     poster_container[i].classList.add('active'); // o atual aparece
+     poster[i].style.transform = 'scale(1)'; // deixa o poster grande
+     poster_info[i].style.display = 'flex'; // aparece as  info
+}
+
+function closePoster(i) {
+     poster_info[i].style.display = ''; // info some
+     poster_area.style.gridTemplateColumns = ''; // aparece outros poster
+     poster[i].style.transform = 'scale(0.3) rotate(-4deg)'; //deixa pequeno
+     poster_container.forEach(posterDiv2 => { // para cada container de poster
+          posterDiv2.classList.remove('hidden'); // eles não estao escondidos
+          posterDiv2.classList.remove('active'); // eles não estao ativos
+     });
+}
