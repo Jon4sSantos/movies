@@ -8,11 +8,11 @@ let posterAberto = false;
 poster_container.forEach((posterDiv, i) => {
      poster[i].addEventListener('mouseenter', () => {
           if (!posterAberto)
-               poster[i].style.transform = 'rotate(4deg) scale(0.6)';
+               poster[i].style.transform = '';
      });
      poster[i].addEventListener('mouseleave', () => {
           if (!posterAberto) {
-               poster[i].style.transform = 'scale(0.3) rotate(-4deg)';
+               poster[i].style.transform = ' ';
           }
      });
      poster[i].addEventListener('click', () => {
@@ -31,20 +31,20 @@ poster_container.forEach((posterDiv, i) => {
 });
 
 function openPoster(i) {
-     poster_area.style.gridTemplateColumns = '1fr'; // abre as info
+     poster_area.style.gridTemplateRow = '1fr'; // abre as info
      poster_container.forEach(posterDiv2 => {
           posterDiv2.classList.add('hidden'); // os outros somem
      });
      poster_container[i].classList.remove('hidden'); // o atual não some
      poster_container[i].classList.add('active'); // o atual aparece
-     poster[i].style.transform = 'scale(1)'; // deixa o poster grande
+     poster[i].style.transform = '' ; // deixa o poster grande
      poster_info[i].style.display = 'flex'; // aparece as  info
 }
 
 function closePoster(i) {
      poster_info[i].style.display = ''; // info some
      poster_area.style.gridTemplateColumns = ''; // aparece outros poster
-     poster[i].style.transform = 'scale(0.3) rotate(-4deg)'; //deixa pequeno
+     poster[i].style.transform = ' '; //deixa pequeno
      poster_container.forEach(posterDiv2 => { // para cada container de poster
           posterDiv2.classList.remove('hidden'); // eles não estao escondidos
           posterDiv2.classList.remove('active'); // eles não estao ativos

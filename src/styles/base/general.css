@@ -16,8 +16,3 @@ main {
      flex-direction: column;
      gap: 20px;
 }
-
-::-webkit-scrollbar {
-    width: 7px;
-    height: 4px;
-}

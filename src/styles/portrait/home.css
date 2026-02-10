@@ -1,0 +1,38 @@
+#home {
+     display: flex;
+     height: 100%;
+     flex-direction: column
+}
+
+#movie_poster_container {     
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+#picture_poster_home {
+     width: 100%;
+}
+
+#poster_home {
+     width: 100%;
+     border: 5px solid yellow;
+} 
+
+#movie_content {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: white;
+}
+
+#movie_info {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+
+#movie_title {
+     font-size: 2em;
+}

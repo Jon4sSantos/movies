@@ -4,11 +4,18 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="src/styles/general.css">
-     <link rel="stylesheet" href="src/styles/header.css">
-     <link rel="stylesheet" href="src/styles/home.css">
-     <link rel="stylesheet" href="src/styles/filter_movie_menu.css">
-     <link rel="stylesheet" href="src/styles/popular_movies.css">
+     <link rel="stylesheet" href="src/styles/base/general.css">
+     <!-- LANDSCAPE -->
+     <link rel="stylesheet" href="src/styles/landscape/header.css" media="screen and (orientation: landscape)">
+     <link rel="stylesheet" href="src/styles/landscape/home.css" media="screen and (orientation: landscape)">
+     <link rel="stylesheet" href="src/styles/landscape/filter_movie_menu.css" media="screen and (orientation: landscape)">
+     <link rel="stylesheet" href="src/styles/landscape/popular_movies.css" media="screen and (orientation: landscape)">
+     <!-- PORTRAIT -->
+     <link rel="stylesheet" href="src/styles/portrait/header.css" media="screen and (orientation: portrait)">
+     <link rel="stylesheet" href="src/styles/portrait/home.css" media="screen and (orientation: portrait)">
+     <link rel="stylesheet" href="src/styles/portrait/filter_movie_menu.css" media="screen and (orientation: portrait)">
+     <link rel="stylesheet" href="src/styles/portrait/popular_movies.css" media="screen and (orientation: portrait)">
+
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
           integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -141,43 +148,35 @@
           </section>
           <section id="popular_movies">
                <h2 id="populares_title">Filmes do Momento!</h2>
-               <div id="slider">
                     <div id="populares_posters">
-                         <div class="popular-poster-div">
+                         <div class="popular-poster-div" style="--delay: 1s">
                               <img src="src/assets/images/Se7en.jpg" class="popular-poster" alt="">
-                              <div class="popular-poster-info">
-                                   <div class="pop-poster-content">
+                               <div class="popular-poster-info">
                                         <h2 class="pop-poster-title">Se7en</h2>
                                         <p class="pop-poster-descripton">
                                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. At reiciendis, quis nulla, error numquam sint libero illum amet cum itaque saepe natus distinctio! Eos, quibusdam veritatis. Sint eaque deleniti dolorum!
                                         </p>
                                    </div>
-                              </div>
                          </div>
-                         <div class="popular-poster-div">
+                         <div class="popular-poster-div" style="--delay: 2s">
                               <img src="src/assets/images/The Usual Suspects.jpg" class="popular-poster" alt="">
                               <div class="popular-poster-info">
-                                   <div class="pop-poster-content">
                                         <h2 class="pop-poster-title">The Usual Suspects</h2>
                                         <p class="pop-poster-descripton">
                                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. At reiciendis, quis nulla, error numquam sint libero illum amet cum itaque saepe natus distinctio! Eos, quibusdam veritatis. Sint eaque deleniti dolorum!
                                         </p>
                                    </div>
-                              </div>
                          </div>
-                         <div class="popular-poster-div">
+                         <div class="popular-poster-div" style="--delay: 3s">
                               <img src="src/assets/images/NightCrawler.jpg" class="popular-poster" alt="">
                               <div class="popular-poster-info">
-                                   <div class="pop-poster-content">
                                         <h2 class="pop-poster-title">NightCrawler</h2>
                                         <p class="pop-poster-descripton">
                                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. At reiciendis, quis nulla, error numquam sint libero illum amet cum itaque saepe natus distinctio! Eos, quibusdam veritatis. Sint eaque deleniti dolorum!
                                         </p>
                                    </div>
-                              </div>
                          </div>
                     </div>
-               </div>
           </section>
 
      </main>

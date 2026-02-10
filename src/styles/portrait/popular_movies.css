@@ -1,0 +1,63 @@
+#popular_movies {
+    color: white;
+    position: relative;
+}
+
+#populares_title {
+    margin-top: 100px;
+    color: yellow;
+    text-align: center;
+    font-size: 3em;
+}
+
+#populares_posters {
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 3px solid yellow;
+    overflow: hidden;
+}
+
+.popular-poster-div {
+    text-align: start;
+    height: 400px;
+}
+
+.popular-poster-div.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-poster-div.hidden {
+    display: none;
+}
+
+.popular-poster {
+    position: absolute;
+    height: 100%;
+    object-fit: contain;
+    transition: all .7s ease;
+    border: 5px solid rgb(194, 194, 0);
+    animation: slide 3s linear infinite;
+    animation-delay: var(--delay);
+}
+
+.popular-poster-info {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10% 10px;
+}
+
+@keyframes slide {
+    from {
+        left: 100%;
+    }
+    to {
+        left: -300px;
+    }
+}
