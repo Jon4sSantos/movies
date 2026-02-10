@@ -1,7 +1,9 @@
 #home {
      display: flex;
      height: 100%;
-     flex-direction: column
+     flex-direction: column;
+     margin-top: var(--alturaHeader);
+     padding: 0 10px;
 }
 
 #movie_poster_container {     

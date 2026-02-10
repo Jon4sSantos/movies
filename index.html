@@ -4,6 +4,8 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- BASE -->
+     <link rel="stylesheet" href="src/styles/base/variables.css">
      <link rel="stylesheet" href="src/styles/base/general.css">
      <!-- LANDSCAPE -->
      <link rel="stylesheet" href="src/styles/landscape/header.css" media="screen and (orientation: landscape)">
@@ -24,6 +26,22 @@
 
 <body>
 
+     <header>
+          <div id="site_title">
+               <h1>site of movies</h1>
+          </div>
+          <div id="search_movies">
+               <form action="" id="search_movies_form">
+                    <input type="text" id="search_movies_input" placeholder="Movie">
+                    <button type="submit" id="search_movies_button">
+                         <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+               </form>
+               <button id="movies_filters_button">
+                    <i class="fa-solid fa-filter"></i>
+               </button>
+          </div>
+     </header>
      <div id="filter_menu_desktop">
           <div id="generos" class="filter-section">
                <h2 class="filter-title">Gêneros</h2>
@@ -113,23 +131,6 @@
                <button class="filter_button" id="aply_filter_button">Aplicar Filtros</button>
           </div>
      </div>
-
-     <header>
-          <div id="site_title">
-               <h1>site of movies</h1>
-          </div>
-          <div id="search_movies">
-               <form action="" id="search_movies_form">
-                    <input type="text" id="search_movies_input" placeholder="Movie">
-                    <button type="submit" id="search_movies_button">
-                         <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
-               </form>
-               <button id="movies_filters_button">
-                    <i class="fa-solid fa-filter"></i>
-               </button>
-          </div>
-     </header>
      <main>
           <section id="home">
                <div id="movie_poster_container">
@@ -149,7 +150,7 @@
           <section id="popular_movies">
                <h2 id="populares_title">Filmes do Momento!</h2>
                     <div id="populares_posters">
-                         <div class="popular-poster-div" style="--delay: 1s">
+                         <div class="popular-poster-div" style="--delay: 1s; background-color: red;">
                               <img src="src/assets/images/Se7en.jpg" class="popular-poster" alt="">
                                <div class="popular-poster-info">
                                         <h2 class="pop-poster-title">Se7en</h2>
@@ -158,7 +159,7 @@
                                         </p>
                                    </div>
                          </div>
-                         <div class="popular-poster-div" style="--delay: 2s">
+                         <div class="popular-poster-div" style="--delay: 3s; background-color: blue;">
                               <img src="src/assets/images/The Usual Suspects.jpg" class="popular-poster" alt="">
                               <div class="popular-poster-info">
                                         <h2 class="pop-poster-title">The Usual Suspects</h2>
@@ -167,7 +168,7 @@
                                         </p>
                                    </div>
                          </div>
-                         <div class="popular-poster-div" style="--delay: 3s">
+                         <div class="popular-poster-div" style="--delay: 5s; background-color: purple;">
                               <img src="src/assets/images/NightCrawler.jpg" class="popular-poster" alt="">
                               <div class="popular-poster-info">
                                         <h2 class="pop-poster-title">NightCrawler</h2>
