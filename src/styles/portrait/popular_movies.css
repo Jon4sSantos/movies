@@ -7,6 +7,7 @@
     color: yellow;
     text-align: center;
     font-size: 3em;
+    word-break: normal;
 }
 
 #populares_posters {
@@ -21,10 +22,12 @@
 
 .popular-poster-div {
     position: absolute;
+    left: 100%;
     animation: slide 6s linear infinite;
     animation-delay: var(--delay);
     height: calc(100% - 10px);
     border-radius: 10px;
+    width: 180px;
 }
 
 .popular-poster-div.active {
@@ -41,6 +44,7 @@
     transition: all .7s ease;
     border: 3px solid rgb(194, 194, 0);
     border-radius: 10px;
+    width: 100%;
 }
 
 .popular-poster-info {
