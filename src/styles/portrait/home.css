@@ -4,6 +4,7 @@
      flex-direction: column;
      margin-top: 20px;
      padding: 0 10px;
+     margin-top: var(--alturaHeader);
 }
 
 #movie_poster_container {     
@@ -34,7 +35,7 @@
      height: 100%;
      z-index: 1;
 }
-
+     
 #movie_content {
      position: absolute;
      display: flex;

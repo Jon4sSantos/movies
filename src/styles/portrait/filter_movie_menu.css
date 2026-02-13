@@ -1,9 +1,9 @@
 #filter_menu_desktop {
   height: 500px;
   width: 80%;
-  background-color: rgba(0, 0, 0, 0.904);
+  background-color: black;
   color: white;
-  z-index: 1;
+  z-index: 3;
   position: fixed;
   top: 0px;
   left: 50%;
@@ -14,35 +14,44 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
+  padding: 10px;
 }
 
+
 .filter-title {
-  font-size: 2em;
+  height: 60px;
+  font-size: 1.5em;
   text-align: center;
-  padding: 10px;
   width: 100%;
-  transform: translateY(-15%);
-  border-bottom: 5px solid white;
   color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .filter-section {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 10px 0;
   align-items: center;
   height: 100%;
   overflow: hidden;
 }
 
-#gender-list {
+#gender_list,
+#years_list {
   display: flex;
   flex-direction: column;
   gap: 5px;
   list-style-type: none;
   width: 100%;
-  overflow: auto;
+  flex: 1;
+  overflow: auto;  
+}
+
+#gender_list::-webkit-scrollbar,
+#years_list::-webkit-scrollbar {
+  display: none;
 }
 
 .gender {
@@ -60,30 +69,22 @@
 
 .gender-content input[type="checkbox"] {
   accent-color: yellow;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 .gender:hover {
   background-color: grey;
 }
 
-.gender label {
-  font-size: 1.5em;
-}
-
-#years_list {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  font-size: 1.8em;
-  overflow-y: scroll;
+.gender-content label {
+  font-size: 1em;
 }
 
 #years_list li {
   text-align: center;
   width: 100%;
+  font-size: 1em;
 }
 
 #years_list li:hover {
@@ -97,7 +98,6 @@
 
 .filter_button {
   padding: 7px;
-  box-shadow: 0px 0px 20px -5px yellow;
   border-radius: 20px;
   font-size: 1.5em;
   font-weight: 600;
@@ -107,12 +107,7 @@
   border: 3px solid black;
 }
 
-.filter_button:hover {
-  background-color: rgb(192, 131, 0);
-  box-shadow: 0px 0px 20px -5px rgb(192, 131, 0);
-}
-
+.filter_button:hover,
 .filter_button:active {
-  background-color: red;
-  box-shadow: 0px 0px 20px -5px red;
+  background-color: rgb(192, 131, 0);
 }

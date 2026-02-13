@@ -1,23 +1,25 @@
 const filter_btn = document.getElementById('movies_filters_button');
 const filter_menu = document.getElementById('filter_menu_desktop');
 const years_list = document.getElementById('years_list');
+const overlay_body = document.getElementById('overlay_filter');
 
 filter_btn.addEventListener('click', () => {
      const open = filter_menu.style.transform === 'translate(-50%, 20%)';
      if (open) {
           filter_menu.style.transform = 'translate(-50%, -100%)';
           filter_btn.style.backgroundColor = 'white';
-
-          years_list.scrollTop0
+          overlay_body.style.display = 'none';
      } else {
           filter_menu.style.transform = 'translate(-50%, 20%)';
           filter_btn.style.backgroundColor = 'grey';
+          overlay_body.style.display = 'flex';
      }
 });
 
 filter_menu.addEventListener('mouseleave', (e) => {
-     filter_menu.style.transform = 'translate(-50%, -100%';
+          filter_menu.style.transform = 'translate(-50%, -100%';
           filter_btn.style.backgroundColor = 'white'; 
+          overlay_body.style.display = 'none';
 });
 
 
