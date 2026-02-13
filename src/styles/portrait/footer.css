@@ -1,0 +1,22 @@
+footer {
+    height: 200px;
+    position: relative;
+    color: yellow;
+    border-top: 2px solid yellow;
+}
+
+#footer_content {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#footer_socialmedias {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
