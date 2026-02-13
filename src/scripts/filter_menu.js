@@ -2,26 +2,33 @@ const filter_btn = document.getElementById('movies_filters_button');
 const filter_menu = document.getElementById('filter_menu_desktop');
 const years_list = document.getElementById('years_list');
 const overlay_body = document.getElementById('overlay_filter');
+const filter_remove = document.getElementById('remove_filter_button');
+const filter_add = document.getElementById('add_filter_button');
+
+function filtersClose() {
+     filter_menu.style.transform = 'translate(-50%, -100%)';
+     filter_btn.style.backgroundColor = 'white';
+     overlay_body.style.display = 'none';
+}
+
+function filtersOpen() {
+     filter_menu.style.transform = 'translate(-50%, 20%)';
+     filter_btn.style.backgroundColor = 'grey';
+     overlay_body.style.display = 'flex';
+}
 
 filter_btn.addEventListener('click', () => {
      const open = filter_menu.style.transform === 'translate(-50%, 20%)';
      if (open) {
-          filter_menu.style.transform = 'translate(-50%, -100%)';
-          filter_btn.style.backgroundColor = 'white';
-          overlay_body.style.display = 'none';
+          filtersClose();
      } else {
-          filter_menu.style.transform = 'translate(-50%, 20%)';
-          filter_btn.style.backgroundColor = 'grey';
-          overlay_body.style.display = 'flex';
+          filtersOpen();
      }
 });
 
 filter_menu.addEventListener('mouseleave', (e) => {
-          filter_menu.style.transform = 'translate(-50%, -100%';
-          filter_btn.style.backgroundColor = 'white'; 
-          overlay_body.style.display = 'none';
+          filtersClose();
 });
-
 
 
 const yearsList = document.getElementById("years_list");
@@ -43,4 +50,12 @@ anos.forEach((ano) => {
                ano.style.textDecoration = 'none';
           }
      });
+});
+
+filter_remove.addEventListener('click', () => {
+     filtersClose();
+});
+
+filter_add.addEventListener('click', () => {
+     filtersClose();
 });
