@@ -32,14 +32,14 @@
 }
 
 .popular-poster-div.hidden {
-    animation-play-state: paused;
-    opacity: 0;
+    animation: none;
 }
 
 .popular-poster-div.active {
-    animation-play-state: paused;
+    animation: none;
     display: flex;
-    width: 120%;
+    width: 100%;
+    left: 0;
 }
 
 .popular-poster {

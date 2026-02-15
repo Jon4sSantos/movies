@@ -5,14 +5,7 @@ const poster_area = document.getElementById('populares_posters');
 
 poster_container.forEach(posterDiv => {
      posterDiv.addEventListener('click', () => {
-          /*
-          if (posterDiv.classList.contains('active')) {
-               posterDiv.classList.toggle('active');
-          }
-          else {
-                posterDiv.classList.toggle('active');
-          }*/
-          poster_container.forEach(poster => {
+          poster_container.forEach(poster => {    
                if (poster === posterDiv) {
                     poster.classList.toggle('active');
                }
