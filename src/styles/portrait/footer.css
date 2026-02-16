@@ -2,7 +2,7 @@ footer {
     height: 200px;
     color: rgb(255, 174, 0);
     border-top: 2px solid yellow;
-    background-image: url('../../assets/footer/wave.svg');
+    background-image: url('../../assets/images/footer/wave.svg');
     background-repeat: repeat-x;
     background-size: cover;
     animation: wave 2s linear infinite;
@@ -22,15 +22,17 @@ footer {
 #footer_socialmedias {
     height: 50px;
     display: flex;
-    color: black;
     justify-content: center;
     align-items: center;
-    font-size: 1.7em;
     gap: 10px;
+}
+
+#footer_socialmedias a {
+    font-size: 1.7em;
+    color: black;
 }
 
 @keyframes wave {  
     from { background-position-x: 0; }
-    to { background-position-x: -800px; }
-    
+    to { background-position-x: -400px; }  
 }

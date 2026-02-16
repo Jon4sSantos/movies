@@ -7,7 +7,7 @@
   position: fixed;
   top: 0px;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -110%);
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px black;
   transition: transform 0.4s ease;

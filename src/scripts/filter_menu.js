@@ -6,19 +6,18 @@ const filter_remove = document.getElementById('remove_filter_button');
 const filter_add = document.getElementById('add_filter_button');
 
 function filtersClose() {
-     filter_menu.style.transform = 'translate(-50%, -100%)';
-     filter_btn.style.backgroundColor = 'white';
+     filter_menu.style.transform = 'translate(-50%, -110%)';
      overlay_body.style.display = 'none';
 }
 
 function filtersOpen() {
      filter_menu.style.transform = 'translate(-50%, 20%)';
-     filter_btn.style.backgroundColor = 'grey';
      overlay_body.style.display = 'flex';
 }
 
-filter_btn.addEventListener('click', () => {
-     const open = filter_menu.style.transform === 'translate(-50%, 20%)';
+const open = filter_menu.style.transform === 'translate(-50%, 20%)';
+
+filter_btn.addEventListener('click', () => {     
      if (open) {
           filtersClose();
      } else {
@@ -30,16 +29,14 @@ filter_menu.addEventListener('mouseleave', (e) => {
           filtersClose();
 });
 
-
 const yearsList = document.getElementById("years_list");
+
 for (let y = 2025; y >= 1950; y--) {
      const li = document.createElement("li");
      li.classList.add('ano');
      li.textContent = y;
      yearsList.appendChild(li);
 }
-const anos = document.querySelectorAll('.ano');
-console.log(anos);
 
 anos.forEach((ano) => {
      ano.addEventListener('click', () => {
