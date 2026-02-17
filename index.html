@@ -51,7 +51,7 @@
                     <li class="gender">
                          <div class="gender-content">
                               <input type="checkbox" name="acao" id="acao">
-                              <label for="acao">Ação</label>
+                              <data-title for="acao">Ação</label>
                          </div>
                     </li>
                     <li class="gender">
@@ -138,12 +138,12 @@
                <div id="movie_poster_container">
                     <div id="poster_home_shadow"></div>
                     <picture id="picture_poster_home">
-                         <!-- IMAGEM DO POSter-->>
+                         <img src="https://www.movieposters.com/cdn/shop/files/the-housemaid_r76k46fi.jpg?v=1765126547&width=1680" alt="" id="poster_home">
                     </picture>
                     <div id="movie_content">
                     <div id="movie_info">
                          <h2 id="movie_title">Bugonia - 2025</h2>
-                         <p id="movie_description">
+                         <p id="movie_overview">
                               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, ea
                               natus molestias quos consequatur quisquam aliquam minima aut, eveniet voluptatem fugit
                               voluptatibus laborum. Error nulla commodi veniam consequatur delectus laboriosam.
@@ -155,29 +155,29 @@
           <section id="popular_movies">
                <h2 id="populares_title">Filmes do Momento!</h2>
                     <div id="populares_posters">
-                         <div class="popular-poster-div" style="--delay: 0s;">
+                         <div class="popular-poster-div" style="--delay: 0s;" data-title="Se7en">
                               <img src="https://www.movieposters.com/cdn/shop/files/seven..mpw.122539.jpg?v=1762463775&width=832" class="popular-poster" alt="">
                                <div class="popular-poster-info">
                                         <h2 class="pop-poster-title">Se7en</h2>
-                                        <p class="pop-poster-descripton">
+                                        <p class="pop-poster-overview">
                                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. At reiciendis, quis nulla, error numquam sint libero illum amet cum itaque saepe natus distinctio! Eos, quibusdam veritatis. Sint eaque deleniti dolorum!
                                         </p>
                               </div>
                          </div>
-                         <div class="popular-poster-div" style="--delay: 2s;">
+                         <div class="popular-poster-div" style="--delay: 2s;" data-title="The Usual Suspects">
                               <img src="https://www.movieposters.com/cdn/shop/files/usual-suspects_24x36-alt2.jpg?v=1758141241&width=832" class="popular-poster" alt="">
                               <div class="popular-poster-info">
                                         <h2 class="pop-poster-title">The Usual Suspects</h2>
-                                        <p class="pop-poster-descripton">
+                                        <p class="pop-poster-overview">
                                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. At reiciendis, quis nulla, error numquam sint libero illum amet cum itaque saepe natus distinctio! Eos, quibusdam veritatis. Sint eaque deleniti dolorum!
                                         </p>
                                    </div>
                          </div>
-                         <div class="popular-poster-div" style="--delay: 4s;">
+                         <div class="popular-poster-div" style="--delay: 4s;" data-title="NightCrawler">
                               <img src="https://www.movieposters.com/cdn/shop/products/5ac32531eba73c28ce80ba27f154d978_33af8451-11d1-4f55-b184-5d9e47db01ca.jpg?v=1762487752&width=832" class="popular-poster" alt="">
                               <div class="popular-poster-info">
                                         <h2 class="pop-poster-title">NightCrawler</h2>
-                                        <p class="pop-poster-descripton">
+                                        <p class="pop-poster-overview">
                                              Lorem ipsum dolor, sit amet consectetur adipisicing elit. At reiciendis, quis nulla, error numquam sint libero illum amet cum itaque saepe natus distinctio! Eos, quibusdam veritatis. Sint eaque deleniti dolorum!
                                         </p>
                                    </div>
@@ -201,6 +201,8 @@
      </footer>
      <script src="src/scripts/filter_menu.js"></script>
      <script src="src/scripts/populars_movies_poster.js"></script>
-     <script src="src/scripts/api.js"></script>
+     
+     <script src="src/scripts/tmdbAPI/search_movie_home.js"></script>
+     <script src="src/scripts/tmdbAPI/popular_moves.js"></script>
 </body>
 </html>

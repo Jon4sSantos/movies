@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Oswald:wght@200..700&display=swap');
+
 :root {
     --alturaHeader: 87px;
+    --fontOswald: 'Oswald', sans-serif;
+    --fontFascinate: 'Fascinate Inline', cursive;
 }

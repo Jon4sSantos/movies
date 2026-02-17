@@ -14,6 +14,7 @@ header {
   text-align: center;
   color: black;
   word-break: break-all;
+  font-family: var(--fontFascinate);
 }
 
 #search_movies {
