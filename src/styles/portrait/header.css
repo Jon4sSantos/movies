@@ -59,7 +59,6 @@ header {
   font-size: 18px;
   padding: 10px;
   border-radius: 20px;
-  background-color: grey;
 }
 
 #search_movies_input::placeholder {

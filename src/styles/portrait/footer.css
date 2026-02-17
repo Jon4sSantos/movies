@@ -1,6 +1,5 @@
 footer {
     height: 200px;
-    color: rgb(255, 174, 0);
     border-top: 2px solid yellow;
     background-image: url('../../assets/images/footer/wave.svg');
     background-repeat: repeat-x;
@@ -16,6 +15,7 @@ footer {
     text-align: center;
     font-weight: bold;
     padding: 10px;
+    color: yellow;
     mix-blend-mode: difference;
 }
 

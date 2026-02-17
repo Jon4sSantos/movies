@@ -1,3 +1,6 @@
+/*
+https://api.themoviedb.org/3/search/movie?api_key=dbfdc01ab58966201786b6700c97cfd4&query=shrek&include_adult=false&language=en-US&page=1 
+*/
 const searchButton = document.getElementById("search_movies_button");
 const posterPicture = document.getElementById("picture_poster_home");
 const movieTitle = document.getElementById("movie_title");
@@ -15,7 +18,6 @@ searchButton.addEventListener("click", (event) => {
         alert("Digite o nome de um filme");
         return;
     }
-/* https://api.themoviedb.org/3/search/movie?api_key=dbfdc01ab58966201786b6700c97cfd4&query=shrek&include_adult=false&language=en-US&page=1 */
     fetch(`${API_BASE}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(movieName)}&include_adult=false&language=pt-BR&page=1`)
         .then((response) => response.json())
         .then((data) => {
@@ -44,4 +46,5 @@ searchButton.addEventListener("click", (event) => {
             movieOverview.innerHTML = movie.overview;
         })
         .catch((error) => console.error("Erro na requisição:", error));
+        document.getElementById("search_movies_input").value = "";
 });
