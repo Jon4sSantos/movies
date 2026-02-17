@@ -7,7 +7,7 @@ header {
   box-shadow: 0px 5px 20px 0px black;
   position: fixed;
   z-index: 2;
-  background-image: linear-gradient(yellow, black);
+  background-color: #d4d000;
 }
 
 #site_title {

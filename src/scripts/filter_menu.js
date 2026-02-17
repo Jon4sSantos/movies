@@ -38,6 +38,7 @@ for (let y = 2025; y >= 1950; y--) {
      yearsList.appendChild(li);
 }
 
+const anos = document.querySelectorAll('.ano');
 anos.forEach((ano) => {
      ano.addEventListener('click', () => {
           ano.classList.toggle('escolhido');
