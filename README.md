@@ -5,6 +5,7 @@ Este é um site que estou construindo para praticar desenvolvimento web, dando u
  - HTML
  - CSS
  - JavaScript
+ - Técnicas e boas práticas (Mobile First ...)
  - Manipulação de APIs
  - Frameworks (React, Tailwind ...)
 
