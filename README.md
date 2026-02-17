@@ -7,3 +7,6 @@ Este é um site que estou construindo para praticar desenvolvimento web, dando u
  - JavaScript
  - Manipulação de APIs
  - Frameworks (React, Tailwind ...)
+
+## Segue o link do site
+-> https://jon4ssantos.github.io/movies/index.html
