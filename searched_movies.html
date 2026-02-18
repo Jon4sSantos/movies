@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles/searched_movies/base/general.css">
+         <!-- BASE -->
+     <link rel="stylesheet" href="src/styles/searched_movies/base/variables.css">
+     <link rel="stylesheet" href="src/styles/searched_movies/base/general.css">
+     <!-- LANDSCAPE -->
+     <link rel="stylesheet" href="src/styles/searched_movies/landscape/header.css" media="screen and (orientation: landscape)">
+     <link rel="stylesheet" href="src/styles/searched_movies/landscape/home.css" media="screen and (orientation: landscape)">
+     <link rel="stylesheet" href="src/styles/searched_movies/landscape/filter_movie_menu.css" media="screen and (orientation: landscape)">
+     <link rel="stylesheet" href="src/styles/searched_movies/landscape/popular_movies.css" media="screen and (orientation: landscape)">
+     <!-- PORTRAIT -->
+     <link rel="stylesheet" href="src/styles/searched_movies/portrait/header.css" media="screen and (orientation: portrait)">
+     <link rel="stylesheet" href="src/styles/searched_movies/portrait/home.css" media="screen and (orientation: portrait)">
+     <link rel="stylesheet" href="src/styles/searched_movies/portrait/filter_movie_menu.css" media="screen and (orientation: portrait)">
+     <link rel="stylesheet" href="src/styles/searched_movies/portrait/popular_movies.css" media="screen and (orientation: portrait)">
+     <link rel="stylesheet" href="src/styles/searched_movies/portrait/footer.css" media="screen and (orientation: portrait)">
+     <link rel="stylesheet" href="src/styles/searched_movies/portrait/searched_movies_container.css" media="screen and (orientation: portrait)">
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+   <!--  <header>
+          <div id="site_title">
+               <h1>site of movies</h1>
+          </div>
+          <div id="search_movies">
+               <button id="movies_filters_button">
+                    <i class="fa-solid fa-filter"></i>
+               </button>
+               <form action="" id="search_movies_form">
+                    <input type="text" id="search_movies_input" placeholder="Movie">
+                    <button type="submit" id="search_movies_button">
+                         <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+               </form>
+               
+          </div>
+     </header>
+     <div id="overlay_filter"></div>
+     <div id="filter_menu_desktop">
+          <div id="generos" class="filter-section">
+               <h2 class="filter-title">Gêneros</h2>
+               <ul id="gender-list">
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="acao" id="acao">
+                              <data-title for="acao">Ação</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="aventura" id="aventura">
+                              <label for="aventura">Aventura</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="drama" id="drama">
+                              <label for="drama">Drama</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="terror" id="terror">
+                              <label for="terror">Terror</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="comedia" id="comedia">
+                              <label for="comedia">Comédia</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="romance" id="romance">
+                              <label for="romance">Romance</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="ficcao" id="ficcao">
+                              <label for="ficcao">Ficção Científica</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="animacao" id="animacao">
+                              <label for="animacao">Animação</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="documentario" id="documentario">
+                              <label for="documentario">Documentário</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="musical" id="musical">
+                              <label for="musical">Musical</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="fantasia" id="fantasia">
+                              <label for="fantasia">Fantasia</label>
+                         </div>
+                    </li>
+                    <li class="gender">
+                         <div class="gender-content">
+                              <input type="checkbox" name="suspense" id="suspense">
+                              <label for="suspense">Suspense</label>
+                         </div>
+                    </li>
+               </ul>
+          </div>
+          <div id="anos" class="filter-section">
+               <h2 class="filter-title">Ano de Lançamento</h2>
+               <ul id="years_list">
+                   -- anos -- 
+               </ul>
+          </div>
+          <div id="filter_button_div">
+               <button class="filter_button" id="remove_filter_button">Remover Filtros</button>
+               <button class="filter_button" id="add_filter_button">Aplicar Filtros</button>
+          </div>
+     </div>
+     -->
+     <main>
+        <section id="searched_movies">
+              <h1 id="searched_movies_title">Resultados da busca por:<br>Bugonia</h1>
+               <div id="searched_movies_container">
+                 <!-- filmes pesquisados -->
+                    <div class="movie-container">
+                         <picture class="movie-poster-picture">
+                              <img src="https://www.movieposters.com/cdn/shop/files/bugonia_b9ed221a-c84a-4f03-bbf8-16c9032e4dbc.jpg?v=1757428343&width=832" alt="">
+                         </picture>
+                    </div>
+
+                    <div class="movie-container">
+                         <picture class="movie-poster-picture">
+                              <img src="https://www.movieposters.com/cdn/shop/products/cruella_sqodcte2.jpg?v=1762969477&width=832" alt="">
+                         </picture>
+                  </div>
+
+                    <div class="movie-container">
+                         <picture class="movie-poster-picture">
+                              <img src="https://www.movieposters.com/cdn/shop/products/black-panther-wakanda-forever_bbma1guv.jpg?v=1762971471&width=832" alt="">
+                         </picture>
+                    </div>
+                    <div class="movie-container">
+                         <picture class="movie-poster-picture">
+                              <img src="https://www.movieposters.com/cdn/shop/products/oppenheimer_ver2_xlg.jpg?v=1683303110&width=832" alt="">
+                         </picture>
+                    </div>
+
+                    <div class="movie-container">
+                         <picture class="movie-poster-picture">
+                              <img src="https://www.movieposters.com/cdn/shop/products/barbie_ver2_xlg.jpg?v=1683299970&width=832" alt="">
+                         </picture>
+                    </div>
+
+                    <div class="movie-container">
+                         <picture class="movie-poster-picture">
+                              <img src="https://www.movieposters.com/cdn/shop/products/spider-man-no-way-home_ver5_xlg.jpg?v=1635801143&width=832" alt="">
+                         </picture>
+                    </div>
+
+                    <div class="movie-container">
+                         <picture class="movie-poster-picture">
+                              <img src="https://www.movieposters.com/cdn/shop/products/the-batman_ver2_xlg.jpg?v=1643662576&width=832" alt="">
+                         </picture>
+                    </div>
+
+                    <div class="movie-container">
+                         <picture class="movie-poster-picture">
+                              <img src="https://www.movieposters.com/cdn/shop/products/joker_ver2_xlg.jpg?v=1569470082&width=832" alt="">
+                         </picture>
+                    </div>
+
+                    <div class="movie-container">
+                         <picture class="movie-poster-picture">
+                              <img src="https://www.movieposters.com/cdn/shop/products/avatar-the-way-of-water_ver2_xlg.jpg?v=1667405321&width=832" alt="">
+                         </picture>
+                    </div>
+
+               </div>
+     </section>
+     <a href="index.html" style="color: red; position: absolute; bottom: 0;">Voltar à página principal</a>
+     </main>
+     </body>
+</html>

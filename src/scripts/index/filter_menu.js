@@ -52,8 +52,10 @@ anos.forEach((ano) => {
 
 filter_remove.addEventListener('click', () => {
      filtersClose();
+
 });
 
 filter_add.addEventListener('click', () => {
+     location.replace('../searched_movies.html');
      filtersClose();
 });

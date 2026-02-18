@@ -1,0 +1,35 @@
+section#searched_movies {
+    text-align: center;
+    color: yellow;
+}
+#searched_movies_container {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.movie-container {
+    width: 120px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-poster-picture {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+picture.movie-poster-picture img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+h2 {
+    margin: auto;       
+}
