@@ -19,7 +19,7 @@ searchButton.addEventListener("click", (event) => {
         alert("Digite o nome de um filme");
         return;
     }
-    fetch(`${API_BASE}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(movieName)}&include_adult=false&language=pt-BR&page=1`)
+    fetch(`${API_BASE}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(movieName)}&include_adult=false&language=en-US&page=1`)
         .then((response) => response.json())
         .then((data) => {
             if (!data.results || data.results.length === 0) {
@@ -36,6 +36,15 @@ searchButton.addEventListener("click", (event) => {
             const posterMovieUrl = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
             posterHome.src = posterMovieUrl;
             posterHome.alt = movie.original_title;
+            if (!movie.original_title) {
+                movieTitle.innerHTML = "Título indisponível";
+            }
+            if (!movie.release_date) {
+                movieTitle.innerHTML = `${movie.original_title} - Data de lançamento indisponível`;
+            }
+            if (!movie.overview) {
+                movieOverview.innerHTML = "Sinopse indisponível";
+            }
             movieTitle.innerHTML = `${movie.original_title} - ${movie.release_date}`;
             movieOverview.innerHTML = movie.overview;
         })
