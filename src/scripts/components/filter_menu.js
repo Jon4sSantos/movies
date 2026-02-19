@@ -56,6 +56,6 @@ filter_remove.addEventListener('click', () => {
 });
 
 filter_add.addEventListener('click', () => {
-     location.replace('../pages/searched_movies.html');
+     location.replace('../../../pages/searched_movies.html');
      filtersClose();
 });
