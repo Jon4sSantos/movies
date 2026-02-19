@@ -1,35 +1,49 @@
-section#searched_movies {
-    text-align: center;
-    color: yellow;
-}
+/* O container pai precisa estar assim (o seu já está mostly ok) */
 #searched_movies_container {
-    margin-top: 5%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    flex-wrap: wrap; /* Permite a quebra de linha */
+    gap: 10px;/* Aumentei um pouco o gap para respirar melhor */
+    padding: 10px; /* Adicionei um padding para as bordas não ficarem coladas */
 }
 
+/* O elemento do card do filme */
 .movie-container {
-    width: 120px;
-    height: 220px;
+    /* A lógica está aqui: 
+       min-width: Define o tamanho mínimo. Se a tela for menor que isso, 
+       ele força a quebra para a linha de baixo.
+       Experimente valores entre 120px e 200px. 
+    */
+    min-width: 150px; 
+    max-width: 250px; /* Impede que o card fique grande demais em telas enormes */
+    flex: 1 1 auto;   /* Faz o card crescer para preencher espaços vazios ou encolher */
+    
+    /* Altura fixa para o card (ou tire isso se quiser altura automática) */
+    height: 300px; 
     display: flex;
     flex-direction: column;
 }
 
-.movie-poster-picture {
-    display: block;
+/* A imagem do poster */
+picture.movie-poster-picture {
+    border-radius: 20px;
+    overflow: hidden;
     height: 100%;
     width: 100%;
+    border: ; /* Adicionei uma borda leve para destacar a imagem */
 }
 
 picture.movie-poster-picture img {
+
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    /* O TRUQUE PARA NÃO DISTORCER A IMAGEM: */
+    object-fit: contain
+    /* Se quiseradar a imagem sem cortes, use 'contain'. 
+       Se quiser preencher todo o quadrado, use 'cover'. */
 }
 
 h2 {
-    margin: auto;       
+    margin: 5px 0; /* Ajusta o margens do título para não ficar muito apertado */
+    font-size: 1rem; /* Tamanho de fonte responsivo */
+    text-align: center;
 }
