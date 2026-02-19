@@ -29,7 +29,7 @@ picture.movie-poster-picture {
     overflow: hidden;
     height: 100%;
     width: 100%;
-    border: ; /* Adicionei uma borda leve para destacar a imagem */
+ /* Adicionei uma borda leve para destacar a imagem */
 }
 
 picture.movie-poster-picture img {
