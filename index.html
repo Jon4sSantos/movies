@@ -4,20 +4,17 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- BASE -->
-     <link rel="stylesheet" href="src/styles/index/base/variables.css">
-     <link rel="stylesheet" href="src/styles/index/base/general.css">
-     <!-- LANDSCAPE -->
-     <link rel="stylesheet" href="src/styles/index/landscape/header.css" media="screen and (orientation: landscape)">
-     <link rel="stylesheet" href="src/styles/index/landscape/home.css" media="screen and (orientation: landscape)">
-     <link rel="stylesheet" href="src/styles/index/landscape/filter_movie_menu.css" media="screen and (orientation: landscape)">
-     <link rel="stylesheet" href="src/styles/index/landscape/popular_movies.css" media="screen and (orientation: landscape)">
-     <!-- PORTRAIT -->
-     <link rel="stylesheet" href="src/styles/index/portrait/header.css" media="screen and (orientation: portrait)">
-     <link rel="stylesheet" href="src/styles/index/portrait/home.css" media="screen and (orientation: portrait)">
-     <link rel="stylesheet" href="src/styles/index/portrait/filter_movie_menu.css" media="screen and (orientation: portrait)">
-     <link rel="stylesheet" href="src/styles/index/portrait/popular_movies.css" media="screen and (orientation: portrait)">
-     <link rel="stylesheet" href="src/styles/index/portrait/footer.css" media="screen and (orientation: portrait)">
-
+     <link rel="stylesheet" href="src/styles/base/variables.css">
+     <link rel="stylesheet" href="src/styles/base/global.css">
+     <link rel="stylesheet" href="src/styles/base/typography.css">
+     <!-- LAYOUT -->
+     <link rel="stylesheet" href="src/styles/layout/header.css">
+     <link rel="stylesheet" href="src/styles/layout/footer.css">
+     <!-- COMPONENTS -->
+     <link rel="stylesheet" href="src/styles/components/filter_movie_menu.css">
+     <!-- PAGE -->
+     <link rel="stylesheet" href="src/styles/pages/index/home.css">
+     <link rel="stylesheet" href="src/styles/pages/index/popular_movies.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
           integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,7 +23,7 @@
 <body>
      <header>
           <div id="site_title">
-               <h1>site of movies</h1>
+               <h1 style="color: black;">site of movies</h1>
           </div>
           <div id="search_movies">
                <button id="movies_filters_button">
@@ -138,13 +135,11 @@
                     <picture id="picture_poster_home">
                          <img src="" alt="" id="poster_home">
                     </picture>
-                    <div id="movie_content">
                     <div id="movie_info">
                          <h2 id="movie_title"></h2>
                          <p id="movie_overview">
                          </p>
                     </div>
-               </div>
                </div>
           </section>
           <section id="popular_movies">
@@ -194,12 +189,13 @@
                <a href="https://github.com/Jon4sSantos" target="_blank"><i class="fa-brands fa-github"></i></a>
           </div>
      </footer>
-     <script src="src/scripts/index/search_movie_home.js"></script>
-     <script src="src/scripts/index/popular_movies.js"></script>
-     <script src="src/scripts/index/first_movie_poster.js"></script>
-
-     <script src="src/scripts/index/filter_menu.js"></script>
-     <script src="src/scripts/index/populars_movies_poster.js"></script>
+     <!-- FEATURES -->
+     <script src="src/scripts/features/popular_movies.js"></script>
+     <script src="src/scripts/features/search_movie_home.js"></script>
+     <!-- COMPONENTS -->
+     <script src="src/scripts/components/first_movie_poster.js"></script>
+     <script src="src/scripts/components/filter_menu.js"></script>
+     <script src="src/scripts/components/populars_movies_poster.js"></script>
      
 </body>
 </html>
