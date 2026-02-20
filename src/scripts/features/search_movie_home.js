@@ -14,7 +14,7 @@ searchButton.addEventListener("click", (event) => {
     event.preventDefault(); // impede o form de recarregar a página
     
     const movieName = document.getElementById("search_movies_input").value.trim();
-
+    
     if (!movieName) {
         alert("Digite o nome de um filme");
         return;
@@ -46,8 +46,17 @@ searchButton.addEventListener("click", (event) => {
                 movieOverview.innerHTML = "Sinopse indisponível";
             }
             movieTitle.innerHTML = `${movie.original_title} - ${movie.release_date}`;
-            movieOverview.innerHTML = movie.overview;
         })
         .catch((error) => console.error("Erro na requisição:", error));
         document.getElementById("search_movies_input").value = "";
+        
+        fetch(`${API_BASE}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(movieName)}&include_adult=false&language=pt-BR&page=1`)
+        .then((response) => response.json())
+        .then((data) => {
+            if (!movie.overview) {
+                movieOverview.innerHTML = "Sinopse indisponível";
+            }
+            else 
+            movieOverview.innerHTML = movie.overview;
+})
 });
