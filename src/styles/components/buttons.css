@@ -1,0 +1,23 @@
+#see_more_button_container {
+    text-align: center;
+}
+
+#see_more_button {
+    height: 50px;
+    width: 45%;
+    max-width: 300px;
+    border-radius: 20px;
+    border: none;
+    outline: 2px solid white;
+    border: 2px solid black;
+    background-image: linear-gradient(yellow, orange);
+    font-size: 1.3em;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#see_more_button:hover {
+    background-image: linear-gradient(rgb(165, 107, 0), rgb(167, 167, 0));
+    color: brown;
+    font-size: 1.4em;
+}

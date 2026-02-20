@@ -1,10 +1,14 @@
-const posterMovie = document.getElementById("poster_home");
+import { API_KEY, API_BASE } from "../../api/tmdb.js";
 
-fetch(`${API_BASE}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
+const posterMovie = document.getElementById("poster_home");
+const randomMoviePage = Math.floor(Math.random() * 100);
+
+const url = `${API_BASE}/movie/popular?api_key=${API_KEY}&language=en-US&page=${randomMoviePage}`;
+fetch(url)
         .then((response) => response.json())
         .then((data) => {
             if (!data.results || data.results.length === 0) {
-                alert("Filme não encontrado");
+                alert("Filme wnão encontrado! Atualize a página, por favor.");
                 return;
             }
 
@@ -20,12 +24,15 @@ fetch(`${API_BASE}/movie/popular?api_key=${API_KEY}&language=en-US&page=1`)
 
             posterMovie.src = posterMovieUrl; /* bota a imagem na tag img */
             posterMovie.alt = movie.original_title; /* bota o alt na tag img */
-            movieTitle.innerHTML = `${movie.original_title} - ${movie.release_date}`; /* bota o título e a data */
-            console.log(posterMovieUrl);
+            const movieDateRealease = movie.release_date.replace(/-/g, "/");
+            const movieTitle = document.getElementById('movie_title');
+            movieTitle.innerHTML = `${movie.original_title} - ${movieDateRealease}`; /* bota o título e a data */
+            
             fetch(`${API_BASE}/movie/popular?api_key=${API_KEY}&language=pt-BR&page=1`)
                 .then((response) => response.json())
                 .then((data) => {
                 const movie = data.results[randomMovieIndex];
+                const movieOverview = document.getElementById('movie_overview');
                 movieOverview.innerHTML = movie.overview; /* bota a sinopse */
             })
         })

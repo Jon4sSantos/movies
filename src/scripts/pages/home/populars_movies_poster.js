@@ -12,6 +12,6 @@ poster_container.forEach(posterDiv => {
                else {
                     poster.classList.toggle('hidden');
                }
+          });
      });
-});
 });
