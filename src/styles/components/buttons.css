@@ -1,8 +1,4 @@
-#see_more_button_container {
-    text-align: center;
-}
-
-#see_more_button {
+button {
     height: 50px;
     width: 45%;
     max-width: 300px;
@@ -14,10 +10,19 @@
     font-size: 1.3em;
     font-weight: 700;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-#see_more_button:hover {
+button:hover {
     background-image: linear-gradient(rgb(165, 107, 0), rgb(167, 167, 0));
     color: brown;
-    font-size: 1.4em;
+    transform: scale(1.1);
+}
+
+#movies_filters_button,
+#search_movies_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+  cursor: pointer;
 }
