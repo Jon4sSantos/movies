@@ -1,4 +1,4 @@
-import { API_KEY, API_BASE } from "../../api/tmdb.js";   
+import { API_KEY, API_BASE } from "../api/tmdb.js";   
    
 const pop_movie = document.querySelectorAll(".popular-poster-div");
     for (const movie of pop_movie) {

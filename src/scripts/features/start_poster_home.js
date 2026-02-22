@@ -1,4 +1,4 @@
-import { API_KEY, API_BASE } from "../../api/tmdb.js";
+import { API_KEY, API_BASE } from "../api/tmdb.js";
 
 const posterMovie = document.getElementById("poster_home");
 const randomMoviePage = Math.floor(Math.random() * 99);

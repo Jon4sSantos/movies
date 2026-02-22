@@ -1,4 +1,4 @@
-import { API_BASE, API_KEY } from "../../api/tmdb.js";
+import { API_BASE, API_KEY } from "../api/tmdb.js";
 
 const searchButton = document.getElementById("search_movies_button");
 const searchInput = document.getElementById("search_movies_input");
