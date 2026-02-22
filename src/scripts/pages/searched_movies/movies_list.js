@@ -2,7 +2,7 @@ import { API_BASE, API_KEY } from "../../api/tmdb.js";
 
 const movies_container = document.getElementById('searched_movies_container');
 const params = new URLSearchParams(window.location.search);
-const movieNameSearch = params.get('search');
+const movieNameSearch = params.get('search')
 
 const url = `${API_BASE}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(movieNameSearch)}&include_adult=false&language=pt-BR&page=1`;
     
@@ -15,15 +15,18 @@ const url = `${API_BASE}/search/movie?api_key=${API_KEY}&query=${encodeURICompon
             }
             
             for (let i = 0; i < data.results.length; i++) {
+                const createMovieContainer = document.createElement('div');
                 const createImg = document.createElement('img');
                 const createPic = document.createElement('picture');
                 const posterMovieUrl = `https://image.tmdb.org/t/p/w500${data.results[i].poster_path}`;
-                
+                movies_container.appendChild(createMovieContainer);
+                createMovieContainer.classList.add('movie-container');
+                createMovieContainer.appendChild(createPic);
                 createPic.classList.add('movie-poster-picture');
                 createImg.src = posterMovieUrl;
                 createImg.alt = data.results[i].original_title;
                 
-                movies_container.appendChild(createPic);
+                createMovieContainer.appendChild(createPic);
                 createPic.appendChild(createImg);    
             }             
         })
