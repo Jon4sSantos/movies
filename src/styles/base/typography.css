@@ -12,3 +12,13 @@ p {
     color: yellow;
     text-align: justify;
 }
+
+#searched_movies_title {
+    color: orange;
+}
+
+#searched_movies_title span{
+    font-size: 1.4em;
+    color: yellow;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

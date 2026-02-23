@@ -4,7 +4,7 @@
 }
 
 .movie-container {
-    width: 150px;
+    max-width: 180px;
     flex: 1 1 150px;     
     display: flex;
     flex-direction: column;
@@ -22,8 +22,6 @@ picture.movie-poster-picture img {
     height: 100%;
     width: 100%;
 }
-
-
 
 #see_more_button_container {
     text-align: center;

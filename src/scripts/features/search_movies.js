@@ -17,7 +17,6 @@ if (searchButton) {
         }
 
         const url = `${API_BASE}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(movieName)}&include_adult=false&language=pt-BR&page=1`;
-
         fetch(url)
             .then((response) => response.json())
             .then((data) => {

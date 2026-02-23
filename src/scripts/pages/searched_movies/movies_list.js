@@ -1,14 +1,16 @@
 import { API_BASE, API_KEY } from "../../api/tmdb.js";
 
+const search_results_title = document.getElementById('searched_movies_title');
 const movies_container = document.getElementById('searched_movies_container');
 const params = new URLSearchParams(window.location.search);
-const movieNameSearch = params.get('search')
+const movieNameSearch = params.get('search');
+search_results_title.innerHTML = `Resultados para:<br><span>${movieNameSearch}</span>`;
 
-const url = `${API_BASE}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(movieNameSearch)}&include_adult=false&language=pt-BR&page=1`;
-    
+const url = `${API_BASE}/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(movieNameSearch)}&include_adult=false&language=pt-BR&page=1`;    
     fetch(url)
         .then((response) => response.json())
         .then((data) => {        
+            
             if (data.results.length === 0) {
                 movies_container.innerHTML = "<p>Nenhum filme encontrado.</p>";
                 return;
@@ -29,5 +31,4 @@ const url = `${API_BASE}/search/movie?api_key=${API_KEY}&query=${encodeURICompon
                 createMovieContainer.appendChild(createPic);
                 createPic.appendChild(createImg);    
             }             
-        })
-        .catch((error) => console.error("Erro:", error));
+        }).catch((error) => console.error("Erro:", error));
