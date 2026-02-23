@@ -1,29 +1,23 @@
 #searched_movies_container {
-    display: flex;
-    flex-wrap: wrap; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
 }
-
 .movie-container {
-    width: 150px;
-    flex: 1 1 150px;     
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
+    max-height: 300px;
 }
 
 picture.movie-poster-picture {
-    border-radius: 10px;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
+    
 }
 
 picture.movie-poster-picture img {
+    border-radius: 20px;
+    
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
-
-
 
 #see_more_button_container {
     text-align: center;
